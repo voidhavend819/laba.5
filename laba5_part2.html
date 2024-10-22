@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Изменение размера изображений</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        h1 {
+            text-align: center;
+            width: 100%;
+            color: #333;
+        }
+
+        .image-container {
+            position: relative;
+            margin: 20px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .image-container img {
+            width: 200px;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .image-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-large {
+            transform: scale(1.5) !important;
+            box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1);
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>Нажмите на изображение, чтобы изменить его размер</h1>
+
+    <div class="image-container" onclick="enlargeImage(this)">
+        <img src="jp1.jpg" alt="Image 1">
+        <div class="caption">грусни</div>
+    </div>
+
+    <div class="image-container" onclick="enlargeImage(this)">
+        <img src="jp2.jpg" alt="Image 2">
+        <div class="caption">веселый</div>
+    </div>
+
+    <script>
+        function enlargeImage(container) {
+            const image = container.querySelector("img");
+            image.classList.toggle("image-large");
+        }
+    </script>
+</body>
+</html>

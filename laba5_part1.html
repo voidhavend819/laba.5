@@ -1,53 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VoidHavend | П2Б Бауржан Кувандыков</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Изменение текста и цвета</title>
+    <style>
+        .highlight {
+            color: red;
+        }
+    </style>
 </head>
 <body>
-<div class="sites">
-    <h2>
-        <button class="instagram">
-         <img src="https://freelogopng.com/images/all_img/1658587303instagram-png.png" alt="" width="30">
-         
-        </button>
+    <p id="para1">Это первый абзац.</p>
+    <p id="para2">Это второй абзац.</p>
+    <p id="para3">Это третий абзац.</p>
+    
+    <button onclick="changeTextAndColor()">Изменить текст и цвет</button>
 
-        <button class="whatsapp">
-<img src="https://cdn.pixabay.com/photo/2015/08/03/13/58/whatsapp-873316_1280.png" alt="" width="30">
-        </button>
-
-
-        <button class="telegram">
-<img src="https://cdn.pixabay.com/photo/2020/10/17/13/21/telegram-5662082_1280.png" alt="" width="30">
-        </button>
-    </h2>
-</div>
-<div class="links">
-    <a href="" class="amain">Главная</a>
-    <a href="" class="aab">Абитуриенту</a>
-    <a href="" class="acol">Колледж</a>
-    <a href="" class="ast">Студенту</a>
-    <a href="" class="avip">Выпускнику</a>
-    <a href="" class="acon">Контакты</a>
-</div>
-    <div class="main-text">
-        <h1> 
-         CATEC 
-         <H6>
-            СОВРЕМЕННОЕ, ДИНАМИЧНО РАЗВИВАЮЩЕЕСЯ УЧЕБНОЕ ЗАВЕДЕНИЕ, СОЗДАННОЕ В 1998 ГОДУ НА БАЗЕ АЛМА-АТИНСКОГО КИНОТЕХНИКУМА, КОТОРЫЙ ПРИНЯЛ ПЕРВЫХ УЧАЩИХСЯ ЕЩЕ В 1940 ГОДУ
-         </H6>
-
-         <H2>
-        Успешно обучаем с 1998 года
-         </H2>
-        </h1>
-    </div>
-    <div class="main">
-        <img src="https://www.catec.kz/img/sbgs.jpg" alt="" width="200">
-        
-    </div>
-   
+    <script>
+        function changeTextAndColor() {
+            const paragraph = document.getElementById("para3");
+            paragraph.textContent = "Текст был изменен!";
+            paragraph.classList.add("highlight");
+        }
+    </script>
 </body>
 </html>
